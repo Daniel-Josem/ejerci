@@ -1,6 +1,6 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e9ecef;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,21 +9,22 @@ body {
 }
 
 .container {
-  background-color: white;
+  background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  max-height: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  max-height: 600px;
   text-align: center;
 }
 
 h1 {
   margin-bottom: 1.5rem;
+  color: #343a40;
 }
 
 .repo-box {
-  max-height: 300px;
+  max-height: 400px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -33,21 +34,21 @@ h1 {
 
 .repo-btn {
   display: block;
-  background-color: #007BFF;
+  background-color: #28a745;
   color: white;
-  padding: 0.75rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
   text-align: center;
   text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 .repo-btn:hover {
-  background-color: #0056b3;
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
-.repo-list a:hover {
-  text-decoration: underline;
-}
