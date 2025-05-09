@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <h1>Formulario Básico</h1>
+  <form action="/phpprocesar.php" method="post">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" title="Escriba su Nombre" required><br><br>
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" placeholder="Escriba su correo" title="Escriba su Correo" required><br><br>
+
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" placeholder="Escriba su contraseña" title="La contraseña debe tener min 8 caracteres, max 12 y un simbolo" required minlength="8" maxlength="12"
+    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,12}$">  <br><br>
+
+    <label for="genero">Género:</label><br>
+    <label for="masculino">Masculino</label>
+    <input type="radio" id="masculino" name="genero" value="masculino">
+    <label for="femenino">Femenino</label>
+    <input type="radio" id="femenino" name="genero" value="femenino"><br><br>
+
+    <label for="intereses">Intereses:</label><br>
+    <input type="checkbox" id="intereses1" name="intereses" value="deporte"> Deporte<br>
+    <input type="checkbox" id="intereses2" name="intereses" value="musica"> Música<br>
+    <input type="checkbox" id="intereses3" name="intereses" value="viajes"> Viajes<br><br>
+
+    <label for="pais">País:</label>
+    <select id="pais" name="pais" title="Selecciona un pais" required>
+      <option value="">Seleccione un país</option>
+      <option value="mexico">México</option>
+      <option value="spain">España</option>
+      <option value="colombia">Colombia</option>
+    </select><br><br>
+
+    <label for="comentario">Comentario:</label><br>
+    <textarea id="comentario" name="comentario" rows="4" cols="50" title="Selecciona un comentario" required></textarea><br>
+
+    <input type="submit" value="Enviar">
+  </form>
+
+</body>
+
+</html>
