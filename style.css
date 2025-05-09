@@ -1,36 +1,207 @@
-/* Estilo para el contenedor de las imágenes */
-.image-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* 2 columnas */
-  gap: 10px;
-  /* Espacio entre las imágenes */
-  max-width: 800px;
-  /* Máximo ancho */
-  margin: 0 auto;
-  /* Centrar el contenedor */
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Estilo para cada cuadro de imagen */
-.image-box {
-  width: 100%;
-  /* Ancho completo */
-  height: 300px;
-  /* Alto fijo para las imágenes */
+/* Fondo principal */
+.fondo {
+  position: relative;
+  height: calc(100vh - 50px);
+  background-image: url('img/fondo4.webp');
+  background-size: cover;
+  background-position: center;
+  color: white;
   overflow: hidden;
-  /* Ocultar cualquier parte que se salga del cuadro */
-  border: 2px solid #ccc;
-  /* Borde gris claro */
-  border-radius: 8px;
-  /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Sombra sutil */
 }
 
-/* Estilo para la imagen dentro del cuadro */
-.image-box img {
+/* Fondo para la segunda sección */
+.fondo2 {
+  position: relative;
+  min-height: 130vh;
+  background-image: url('img/fondo3.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 50px 0;
+}
+
+/* Overlay para oscurecer fondo */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Logo "Sexflix" */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 180px;
+  z-index: 2;
+}
+
+/* Botones arriba a la derecha */
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+}
+
+select, .btn-iniciar {
+  padding: 8px 12px;
+  font-size: 1em;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-iniciar {
+  background-color: #67a4d5;
+  color: white;
+}
+
+/* Contenido central */
+.contenido-central {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.contenido-central h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.input-email {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 600px;
+  width: 100%;
+  justify-content: center;
+}
+
+.input-email input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 4px;
+  border: none;
+}
+
+.input-email button {
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border-radius: 4px;
+  background-color: #67a4d5;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Carrusel */
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-inner {
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel-item {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.carrusel-img {
+  height: 300px;
+  width: 100%;
   object-fit: cover;
-  /* Asegura que la imagen cubra todo el área del cuadro */
+}
+
+/* Carrusel control spacing */
+.carousel-control-prev,
+.carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Cards */
+.card-group {
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  flex: 1 1 300px;
+  max-width: 350px;
+  min-height: 400px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  max-height: 150px;      /* Altura máxima clara */
+  height: auto;
+  width: 100%;
+  object-fit: contain;    /* Ajusta sin recortar */
+  padding: 10px;          /* Espacio interno para aire */
+  background-color: black; /* Para que no haya fondo blanco si sobra espacio */
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contenido-central h1 {
+    font-size: 2.5rem;
+  }
+
+  .input-email {
+    flex-direction: column;
+  }
+
+  .input-email input,
+  .input-email button {
+    width: 100%;
+  }
+
+  .card {
+    min-height: auto;
+  }
 }

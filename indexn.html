@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sexflix</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fondo con overlay y botones -->
+  <div class="fondo">
+    <img src="img/sexflix.png" alt="sexflix" class="logo">
+    <div class="overlay"></div>
+
+    <!-- Botones arriba a la derecha -->
+    <div class="top-right">
+      <select class="idioma" aria-label="Seleccionar idioma">
+        <option selected value="espanol">Español</option>
+        <option value="ingles">Inglés</option>
+      </select>
+      <button class="btn-iniciar">Iniciar sesión</button>
+    </div>
+
+    <!-- Contenido central -->
+    <div class="contenido-central">
+      <h1>inscribete <br> para ver peliculas ilimitadas <br> </h1>
+      <p>¿Quieres ver Sexflix ya? Ingresa tu email para crear una cuenta o reiniciar tu<br>
+        membresía de Netflix.</p>
+
+      <form class="input-email">
+        <input type="email" placeholder="Email" required>
+        <button type="submit">Comenzar &gt;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Fondo 2 con carrusel y tarjetas -->
+  <div class="fondo2">
+    <div class="carousel-container container mt-5">
+      <h2>Tendencias</h2>
+      <div id="carouselMulti" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-4"><img src="img/conjuro.jpg" class="d-block w-100 carrusel-img" alt="conjuro"></div>
+              <div class="col-4"><img src="img/conjuro4.jpg" class="d-block w-100 carrusel-img" alt="conjuro 4"></div>
+              <div class="col-4"><img src="img/destino.jpg" class="d-block w-100 carrusel-img" alt="destino"></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-4"><img src="img/minions.jpg" class="d-block w-100 carrusel-img" alt="minions"></div>
+              <div class="col-4"><img src="img/cenicienta.jpg" class="d-block w-100 carrusel-img" alt="cenicienta"></div>
+              <div class="col-4"><img src="img/aro3.jpg" class="d-block w-100 carrusel-img" alt="aro3"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMulti" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMulti" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="mt-5">Más motivos para unirte</h2><br>
+
+      <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="img/tv.webp" alt="TV">
+          <div class="card-body">
+            <h5 class="card-title">Disfruta en tu TV</h5>
+            <p class="card-text">Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="img/offline.avif" alt="Offline">
+          <div class="card-body">
+            <h5 class="card-title">Descarga tus series para verlas offline</h5>
+            <p class="card-text">Guarda tu contenido favorito y siempre tendrás algo para ver.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="img/movil.jpg" alt="Movil">
+          <div class="card-body">
+            <h5 class="card-title">Disfruta donde quieras</h5>
+            <p class="card-text">Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
