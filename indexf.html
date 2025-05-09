@@ -5,14 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="contenedor">
   <h1>Formulario Básico</h1>
   <form action="/phpprocesar.php" method="post">
 
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" placeholder="Escriba su Nombre Completo" title="Escriba su Nombre Completo" required><br><br>
+    <label for="nombre">Nombre Completo:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre Completo" title="Escriba su Nombre Completo" required><br><br>
 
     <label for="correo">Correo:</label>
     <input type="email" id="correo" name="correo" placeholder="Escriba su correo" title="Escriba su Correo" required><br><br>
@@ -22,10 +24,8 @@
     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,12}$">  <br><br>
 
     <label for="genero">Género:</label><br>
-    <label for="masculino">Masculino</label>
-    <input type="radio" id="masculino" name="genero" value="masculino">
-    <label for="femenino">Femenino</label>
-    <input type="radio" id="femenino" name="genero" value="femenino"><br><br>
+    <label input type="radio" for="masculino"><input type="radio" id="masculino" name="genero" value="masculino"> Masculino</label>
+    <label input type="radio" for="femenino"><input type="radio" id="femenino" name="genero" value="femenino"> Femenino</label><br><br>
 
     <label for="intereses">Intereses:</label><br>
     <input type="checkbox" id="intereses1" name="intereses" value="deporte"> Deporte<br>
@@ -45,6 +45,7 @@
 
     <input type="submit" value="Enviar">
   </form>
+  </div>
 
 </body>
 
